@@ -13,7 +13,7 @@ Descrição: Lista todos os livros. Aceita filtros e ordenação
 Método: GET
 URL: http://localhost:3000/api/livros/1
 Body: não possui
-
+Resposta:
 {
   "id": 1,
   "nome": "O Pequeno Príncipe",
@@ -31,6 +31,44 @@ Body:
   "preco": 20,
   "genero": "Fábula",
   "paginas": 120
+}
+
+### 4- DELETE /api/livros
+Método: DELETE
+URL: http://localhost:3000/api/livros/:id do livro a ser deletado
+Body: Não possui
+Resposta:
+{
+  "mensagem": "Livro removido com sucesso",
+  "livro": {
+    "id": 7,
+    "nome": "A Divina Comédia",
+    "preco": 85,
+    "genero": "Ficção"
+    "paginas": 690
+    }
+}
+
+### 5- PUT /api/livros
+Método: PUT
+URL: http://localhost:3000/api/livros/:id do livro a ser alterado
+Body:
+{
+  "nome": "O Pequeno Príncipe - Nova edição",
+  "preco": 20,
+  "genero": "Fábula",
+  "paginas": 120
+}
+Resposta:
+{
+  "mensagem": "Livro removido com sucesso",
+  "livro": {
+    "id": 1,
+    "nome": "O Pequeno Príncipe - Nova edição",
+    "preco": 20,
+    "genero": "Fábula",
+    "paginas": 120
+    }
 }
 
 ## Exemplos de requisição no Postman
