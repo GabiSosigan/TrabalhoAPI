@@ -33,7 +33,7 @@ Body:
   "paginas": 120
 }
 
-### 4- DELETE /api/livros
+### 4- DELETE /api/livros/:id
 Método: DELETE
 URL: http://localhost:3000/api/livros/:id do livro a ser deletado
 Body: Não possui
@@ -49,7 +49,7 @@ Resposta:
     }
 }
 
-### 5- PUT /api/livros
+### 5- PUT /api/livros/:id
 Método: PUT
 URL: http://localhost:3000/api/livros/:id do livro a ser alterado
 Body:
