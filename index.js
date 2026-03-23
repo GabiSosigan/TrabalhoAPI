@@ -174,5 +174,4 @@ app.put('/api/livros/:id', (req, res) => {
 
 app.listen(3000, () => {
     console.log('🚀 API rodando em http://localhost:3000');
-    console.log("DELETE registrado");
 });
