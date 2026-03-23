@@ -9,7 +9,7 @@
   },
   "item": [
     {
-      "name": "http://localhost:3000/api/livros/6",
+      "name": "http://localhost:3000/api/livros/",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -18,7 +18,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"nome\": \"Dom Casmurro\",\r\n  \"preco\": 35,\r\n  \"genero\": \"Romance\",\r\n  \"paginas\": 256\r\n}",
+          "raw": "{\r\n  \"nome\": \"A Revolução dos Bichos\",\r\n  \"preco\": 25,\r\n  \"genero\": \"Ficção\",\r\n  \"paginas\": 152\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -36,6 +36,105 @@
             "api",
             "livros",
             ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/livros/8",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"O Senhor dos Anéis: A Sociedade do Anel\",\r\n  \"preco\": 80,\r\n  \"genero\": \"Fantasia\",\r\n  \"paginas\": 576\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/livros/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "livros",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/livros/7",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"O Senhor dos Anéis: A Sociedade do Anel\",\r\n  \"preco\": 80,\r\n  \"genero\": \"Fantasia\",\r\n  \"paginas\": 576\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/livros/7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "livros",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/livros/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"O Pequeno Príncipe - Nova Edição\",\r\n    \"preco\": 20,\r\n    \"genero\": \"Fábula\",\r\n    \"paginas\": 120\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/livros/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "livros",
+            "1"
           ]
         }
       },
