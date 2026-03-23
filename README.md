@@ -60,6 +60,13 @@ Teste POST sem gênero
 Teste POST sem preço
 <img width="1095" height="622" alt="testePOSTpreco0" src="https://github.com/user-attachments/assets/536b4cdc-32bb-44a9-996f-ee12d2980a9a" />
 
+Teste DELETE
+<img width="1097" height="494" alt="Captura de tela 2026-03-23 165832" src="https://github.com/user-attachments/assets/ec9d8716-4f65-439f-b781-8a146101f46a" />
+
+Teste PUT
+<img width="1092" height="549" alt="Captura de tela 2026-03-23 170109" src="https://github.com/user-attachments/assets/ffdfdef1-df74-4623-9a66-91c921128c40" />
+
+
 ## Validações implementadas
 No POST/api/livros
 nome obrigatório
