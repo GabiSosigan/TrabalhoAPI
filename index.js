@@ -9,7 +9,6 @@ let livros = [
     { id: 3, nome: "It: A Coisa", preco: 120, genero: "Terror", paginas: 1104 },
     { id: 4, nome: "O Hobbit", preco: 50, genero: "Fantasia", paginas: 340 },
     { id: 5, nome: "1984", preco: 30, genero: "Ficção Distópica", paginas: 400 }
-
 ];
 
 let proximoId = 6;
@@ -90,7 +89,6 @@ app.get('/api/livros/:id', (req, res) => {
 app.post('/api/livros', (req, res) => {
     const { nome, preco, genero, paginas } = req.body;
 
-    // Validações
     if (!nome || nome.trim() === "") {
         return res.status(400).json({ erro: "O nome é obrigatório" });
     }
@@ -120,6 +118,61 @@ app.post('/api/livros', (req, res) => {
     res.status(201).json(novoLivro);
 });
 
+app.delete('/api/livros/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+
+    const index = livros.findIndex(l => l.id === id);
+
+    if (index === -1) {
+        return res.status(404).json({ erro: "Livro não encontrado" });
+    }
+
+    const livroRemovido = livros.splice(index, 1)[0];
+
+    res.json({
+        mensagem: "Livro removido com sucesso",
+        livro: livroRemovido
+    });
+});
+
+app.put('/api/livros/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const livro = livros.find(l => l.id === id);
+
+    if (!livro) {
+        return res.status(404).json({ erro: "Livro não encontrado" });
+    }
+
+    const { nome, preco, genero, paginas } = req.body;
+
+    if (!nome || nome.trim() === "") {
+        return res.status(400).json({ erro: "O nome é obrigatório" });
+    }
+
+    if (preco === undefined || isNaN(preco) || preco <= 0) {
+        return res.status(400).json({ erro: "O preço deve ser um número válido maior que 0" });
+    }
+
+    if (!genero || genero.trim() === "") {
+        return res.status(400).json({ erro: "O gênero é obrigatório" });
+    }
+
+    if (paginas === undefined || isNaN(paginas) || paginas <= 0) {
+        return res.status(400).json({ erro: "As páginas devem ser um número válido maior que 0" });
+    }
+
+    livro.nome = nome.trim();
+    livro.preco = Number(preco);
+    livro.genero = genero.trim();
+    livro.paginas = Number(paginas);
+
+    res.json({
+        mensagem: "Livro atualizado com sucesso",
+        livro
+    });
+});
+
 app.listen(3000, () => {
     console.log('🚀 API rodando em http://localhost:3000');
+    console.log("DELETE registrado");
 });
