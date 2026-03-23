@@ -1,0 +1,45 @@
+{
+  "info": {
+    "_postman_id": "69afc87c-c856-4e8c-b59c-b43b6c6c8191",
+    "name": "TrabalhoAPI",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52842443",
+    "_collection_link": "https://go.postman.co/collection/52842443-69afc87c-c856-4e8c-b59c-b43b6c6c8191?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:3000/api/livros/6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Dom Casmurro\",\r\n  \"preco\": 35,\r\n  \"genero\": \"Romance\",\r\n  \"paginas\": 256\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/livros/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "livros",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
