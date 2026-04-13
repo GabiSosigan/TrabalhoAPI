@@ -13,10 +13,15 @@ let livros = [
     { id: 2, nome: "Os Sete Maridos de Evelyn Hugo", preco: 60, genero: "Romance", paginas: 360 },
     { id: 3, nome: "It: A Coisa", preco: 120, genero: "Terror", paginas: 1104 },
     { id: 4, nome: "O Hobbit", preco: 50, genero: "Fantasia", paginas: 340 },
-    { id: 5, nome: "1984", preco: 30, genero: "Ficção Distópica", paginas: 400 }
+    { id: 5, nome: "1984", preco: 30, genero: "Ficção Distópica", paginas: 400 },
+    { id: 6, nome: "A Menina que Roubava Livros", preco: 25, genero: "Ficção Histórica", paginas: 480 },
+    { id: 7, nome: "Jogos Vorazes", preco: 35, genero: "Ficção Científica", paginas: 384 },
+    { id: 8, nome: "A Maldição do Mar", preco: 45, genero: "Fantasia", paginas: 320 },
+    { id: 9, nome: "O Corvo", preco: 15, genero: "Poesia", paginas: 64 },
+    { id: 10, nome: "Tudo ou Nada", preco: 40, genero: "Ficção", paginas: 400 }
 ];
 
-let proximoId = 6;
+let proximoId = 11;
 
 /**
  * Endpoint GET que lista todos os livros
