@@ -3,6 +3,11 @@ const app = express();
 
 app.use(express.json());
 
+/**
+ * Banco de dados em memória para armazenar os livros.
+ * Cada livro tem um ID único, nome, preço, gênero e número de páginas.
+ */
+
 let livros = [
     { id: 1, nome: "O Pequeno Príncipe", preco: 20, genero: "Fábula", paginas: 120 },
     { id: 2, nome: "Os Sete Maridos de Evelyn Hugo", preco: 60, genero: "Romance", paginas: 360 },
@@ -12,6 +17,10 @@ let livros = [
 ];
 
 let proximoId = 6;
+
+/**
+ * Endpoint GET que lista todos os livros
+ */
 
 app.get('/api/livros', (req, res) => {
     const {
@@ -75,6 +84,10 @@ app.get('/api/livros', (req, res) => {
     });
 });
 
+/**
+ * Endpoint GET que pega livros pelo ID
+ */
+
 app.get('/api/livros/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const livro = livros.find(l => l.id === id);
@@ -85,6 +98,10 @@ app.get('/api/livros/:id', (req, res) => {
 
     res.json(livro);
 });
+
+/**
+ * Endpoint POST que cria um novo livro
+ */
 
 app.post('/api/livros', (req, res) => {
     const { nome, preco, genero, paginas } = req.body;
@@ -118,6 +135,10 @@ app.post('/api/livros', (req, res) => {
     res.status(201).json(novoLivro);
 });
 
+/**
+ * Endpoint DELETE que remove um livro pelo ID
+ */
+
 app.delete('/api/livros/:id', (req, res) => {
     const id = parseInt(req.params.id);
 
@@ -134,6 +155,10 @@ app.delete('/api/livros/:id', (req, res) => {
         livro: livroRemovido
     });
 });
+
+/**
+ * Endpoint PUT que atualiza um livro pelo ID
+ */
 
 app.put('/api/livros/:id', (req, res) => {
     const id = parseInt(req.params.id);
@@ -171,6 +196,10 @@ app.put('/api/livros/:id', (req, res) => {
         livro
     });
 });
+
+/**
+ * Inicia o servidor na porta 3000
+ */
 
 app.listen(3000, () => {
     console.log('🚀 API rodando em http://localhost:3000');
